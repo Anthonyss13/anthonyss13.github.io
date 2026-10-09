@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Places to Visit in Ireland</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+
+        body {
+            @apply m-0 text-gray-900;
+        }
+
+        header {
+            @apply flex flex-col justify-center items-center
+                w-full
+                bg-green-300
+                px-12 lg:px-60
+                py-8 lg:py-14;
+        }
+
+        header h1 {
+            @apply text-5xl md:text-7xl
+                tracking-tight
+                text-center
+                mb-6 lg:mb-8;
+        }
+
+        h1,
+        h2 {
+            @apply text-green-700 font-bold;
+        }
+
+        header p {
+            @apply text-green-900
+                text-xl md:text-2xl
+                text-center
+                font-normal
+                max-w-3xl;
+        }
+
+        section {
+            @apply bg-green-200
+                px-6 md:px-12 lg:px-20
+                py-10 lg:py-16;
+        }
+
+        section > * {
+            @apply w-full max-w-4xl mx-auto;
+        }
+
+        section h2 {
+            @apply text-3xl lg:text-4xl
+                tracking-tight
+                mt-10
+                mb-4;
+        }
+
+        section img {
+            @apply w-full
+                rounded-xl
+                shadow-md
+                mb-12;
+        }
+
+        header *:last-child {
+            @apply mb-0!;
+        }
+
+        section *:last-child {
+            @apply mb-0!;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Places to Visit in Ireland</h1>
+
+        <p>
+            Discover some of the most popular attractions and destinations
+            around Ireland.
+        </p>
+    </header>
+
+    <main>
+
+        <section>
+
+            <h2>Guinness Storehouse, Dublin</h2>
+
+            <img
+                src="../assets/img/guinness-storehouse.jpg"
+                alt="Guinness Storehouse in Dublin"
+            >
+
+            <h2>Cliffs of Moher, Co. Clare</h2>
+
+            <img
+                src="../assets/img/cliffs-of-moher.jpg"
+                alt="Cliffs of Moher in County Clare"
+            >
+
+            <h2>Dublin Zoo</h2>
+
+            <img
+                src="../assets/img/dublin-zoo.jpg"
+                alt="Dublin Zoo"
+            >
+
+            <h2>National Aquatic Centre, Dublin</h2>
+
+            <img
+                src="../assets/img/national-aquatic-centre.jpg"
+                alt="National Aquatic Centre in Dublin"
+            >
+
+            <h2>Book of Kells Exhibition, Trinity College, Dublin</h2>
+
+            <img
+                src="../assets/img/book-of-kells.jpg"
+                alt="Book of Kells Exhibition at Trinity College Dublin"
+            >
+
+        </section>
+
+    </main>
+
+</body>
+</html>
