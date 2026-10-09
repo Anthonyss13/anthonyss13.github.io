@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -39,7 +40,16 @@
                 text-xl md:text-2xl
                 text-center
                 font-normal
-                max-w-3xl;
+                max-w-3xl
+                mb-6;
+        }
+
+        header a {
+            @apply underline font-bold;
+        }
+
+        header img {
+            @apply w-full max-w-xl mt-6;
         }
 
         section {
@@ -80,12 +90,28 @@
 <body>
 
     <header>
+
         <h1>Places to Visit in Ireland</h1>
 
         <p>
             Discover some of the most popular attractions and destinations
             around Ireland.
         </p>
+
+        <p>
+            What are Ireland's most popular tourist attractions?
+            According to a report by the
+            <a href="https://www.discoverireland.ie/" target="_blank">
+                Irish Tourist Board
+            </a>,
+            the top five paid visitor attractions are those listed below.
+        </p>
+
+        <img
+            src="../assets/img/backpackers-visiting-ireland.png"
+            alt="Backpackers visiting Ireland"
+        >
+
     </header>
 
     <main>
