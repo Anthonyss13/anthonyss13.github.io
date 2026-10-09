@@ -10,7 +10,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
-
         body {
             @apply m-0 text-gray-900;
         }
@@ -71,9 +70,18 @@
 
         section img {
             @apply w-full
-                rounded-xl
                 shadow-md
-                mb-12;
+                my-5
+                rounded-[25px];
+        }
+
+        section p {
+            @apply text-lg md:text-xl/8 mb-5;
+        }
+
+        section .highlight-text span {
+            @apply bg-green-700 text-white
+                inline-block px-6 py-2;
         }
 
         header *:last-child {
@@ -83,14 +91,11 @@
         section *:last-child {
             @apply mb-0!;
         }
-
     </style>
 </head>
 
 <body>
-
     <header>
-
         <h1>Places to Visit in Ireland</h1>
 
         <p>
@@ -111,13 +116,10 @@
             src="../assets/img/backpackers-visiting-ireland.png"
             alt="Backpackers visiting Ireland"
         >
-
     </header>
 
     <main>
-
         <section>
-
             <h2>Guinness Storehouse, Dublin</h2>
 
             <img
@@ -133,6 +135,10 @@
             >
 
             <h2>Dublin Zoo</h2>
+
+            <p class="highlight-text">
+                <span>Annual Number of Visitors: <b>1,527,000</b></span>
+            </p>
 
             <img
                 src="../assets/img/dublin-zoo.jpg"
@@ -152,10 +158,8 @@
                 src="../assets/img/book-of-kells.jpg"
                 alt="Book of Kells Exhibition at Trinity College Dublin"
             >
-
         </section>
-
     </main>
-
 </body>
+
 </html>

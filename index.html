@@ -8,142 +8,267 @@
     <title>Anthony Silveira | Web Design</title>
 
     <style>
-
-        /* Basic page styles */
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #222222;
+            background-color: #f2eee8;
+            color: #253444;
+            line-height: 1.6;
         }
-
 
         /* Header */
 
         header {
-            background-color: #ffffff;
+            min-height: 480px;
+            padding: 100px 7%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            background-color: #384655;
+            background-image:
+                linear-gradient(
+                    to right,
+                    rgba(15, 25, 35, 0.15),
+                    rgba(15, 25, 35, 0.85)
+                ),
+                url("assets/img/download.png");
+
+            background-size: cover;
+            background-position: center;
+            color: #ffffff;
+        }
+
+        .header-text {
+            max-width: 520px;
+            text-align: right;
+        }
+
+        .header-line {
+            width: 65px;
+            height: 4px;
+            margin: 0 0 25px auto;
+            background-color: #a9c7da;
+            border-radius: 4px;
         }
 
         header h1 {
-            margin-top: 0;
-            margin-bottom: 10px;
+            margin: 0 0 18px;
+            font-size: clamp(38px, 5vw, 64px);
+            line-height: 1.1;
+            letter-spacing: -2px;
         }
 
         header h2 {
-            margin-top: 0;
-            margin-bottom: 20px;
+            margin: 0 0 22px;
+            font-size: 25px;
             font-weight: normal;
+            color: #d1e1ec;
         }
 
+        header p {
+            margin: 0;
+            font-size: 18px;
+            color: #edf1f4;
+        }
 
-        /* Main content */
+        /* Exercises */
 
-        section {
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 25px 75px;
+        }
+
+        section h2 {
+            margin: 0 0 30px;
+            font-size: 30px;
+            letter-spacing: -0.8px;
+            color: #304c63;
+        }
+
+        .exercise-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        .exercise-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 25px;
+            min-height: 110px;
             background-color: #ffffff;
-        }
-
-        section p {
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-
-        /* Links */
-
-        a {
-            color: #0066cc;
+            border: 1px solid #e0e3e5;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(37, 52, 68, 0.04);
+            color: #304c63;
             text-decoration: none;
+            transition:
+                transform 0.2s,
+                box-shadow 0.2s,
+                border-color 0.2s;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .exercise-card:hover {
+            transform: translateY(-4px);
+            border-color: #8ba7bc;
+            box-shadow: 0 10px 24px rgba(37, 52, 68, 0.10);
         }
 
+        .exercise-card:focus-visible {
+            outline: 3px solid #304c63;
+            outline-offset: 4px;
+        }
+
+        .exercise-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            flex-shrink: 0;
+            background-color: #eaf0f4;
+            border-radius: 10px;
+            color: #456780;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .exercise-title {
+            flex: 1;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .exercise-arrow {
+            font-size: 24px;
+            color: #69849a;
+        }
+
+        /* Footer */
+
+        footer {
+            padding: 22px;
+            border-top: 1px solid #dcdedc;
+            text-align: center;
+            color: #647382;
+            font-size: 14px;
+        }
+
+        footer p {
+            margin: 0;
+        }
 
         /* Small screens */
 
         @media (max-width: 767px) {
-
             header {
-                padding: 30px 5%;
+                min-height: 400px;
+                padding: 70px 7%;
+                background-image:
+                    linear-gradient(
+                        rgba(15, 25, 35, 0.65),
+                        rgba(15, 25, 35, 0.80)
+                    ),
+                    url("assets/img/download.png");
             }
 
-            section {
-                padding: 30px 5%;
+            header h2 {
+                font-size: 22px;
             }
 
+            main {
+                padding: 40px 20px 50px;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+
+            .exercise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .exercise-card {
+                padding: 20px;
+                gap: 15px;
+            }
         }
 
-
-        /* Large screens */
-
-        @media (min-width: 768px) {
-
-            header {
-                padding: 40px 20%;
+        @media (prefers-reduced-motion: reduce) {
+            .exercise-card {
+                transition: none;
             }
 
-            section {
-                padding: 40px 20%;
+            .exercise-card:hover {
+                transform: none;
             }
-
         }
-
     </style>
-
 </head>
 
-
 <body>
-
     <header>
+        <div class="header-text">
+            <div class="header-line" aria-hidden="true"></div>
 
-        <h1>Anthony Silveira</h1>
+            <h1>Anthony Silveira</h1>
 
-        <h2>Welcome to my website.</h2>
+            <h2>Welcome to my website.</h2>
 
-        <p>
-            I created this website to showcase some of my recent web design work.
-        </p>
-
+            <p>
+                I created this website to showcase some of my recent web design work.
+            </p>
+        </div>
     </header>
 
+    <main>
+        <section>
+            <h2>My Web Design Exercises</h2>
 
-    <section>
+            <div class="exercise-grid">
+                <a class="exercise-card" href="exercises/page-1.html">
+                    <span class="exercise-number" aria-hidden="true">01</span>
+                    <span class="exercise-title">A Tale of Two Cities</span>
+                    <span class="exercise-arrow" aria-hidden="true">&rarr;</span>
+                </a>
 
-        <h2>My Web Design Exercises</h2>
+                <a class="exercise-card" href="exercises/page-2.html">
+                    <span class="exercise-number" aria-hidden="true">02</span>
+                    <span class="exercise-title">Purple rain</span>
+                    <span class="exercise-arrow" aria-hidden="true">&rarr;</span>
+                </a>
 
+                <a class="exercise-card" href="exercises/page-3.html">
+                    <span class="exercise-number" aria-hidden="true">03</span>
+                    <span class="exercise-title">Big Heading</span>
+                    <span class="exercise-arrow" aria-hidden="true">&rarr;</span>
+                </a>
 
-        <p>
-            <a href="exercises/page-1.html">
-                A Tale of Two Cities
-            </a>
-        </p>
+                <a class="exercise-card" href="exercises/page-4.html">
+                    <span class="exercise-number" aria-hidden="true">04</span>
+                    <span class="exercise-title">Vincent Van Gogh</span>
+                    <span class="exercise-arrow" aria-hidden="true">&rarr;</span>
+                </a>
 
+                <a class="exercise-card" href="exercises/page-5.html">
+                    <span class="exercise-number" aria-hidden="true">05</span>
+                    <span class="exercise-title">Places to Visit in Ireland</span>
+                    <span class="exercise-arrow" aria-hidden="true">&rarr;</span>
+                </a>
+            </div>
+        </section>
+    </main>
 
-        <p>
-            <a href="exercises/page-2.html">
-                Page 2
-            </a>
-        </p>
-
-
-        <p>
-            <a href="exercises/soccer.html">
-                Soccer
-            </a>
-        </p>
-
-
-        <p>
-            <a href="exercises/page-3.html">
-                Page 3
-            </a>
-        </p>
-
-    </section>
-
+    <footer>
+        <p>Anthony Silveira | Web Design</p>
+    </footer>
 </body>
 
 </html>
