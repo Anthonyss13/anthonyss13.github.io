@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Block with Text</title>
+    <meta name="description" content="A hero block with animated headings and background colours.">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style type="text/tailwindcss">
+        header {
+            @apply min-h-[60vh] md:min-h-[80vh]
+            flex flex-col justify-center items-center
+            text-center px-8 py-12 overflow-hidden;
+
+            background-color: red;
+            animation: bg-change 4s ease-in infinite alternate;
+        }
+
+        header h1 {
+            @apply text-7xl md:text-8xl
+            text-white font-bold
+             tracking-tight
+             mb-8;
+        }
+
+        header h2 {
+            @apply text-4xl md:text-5xl text-white;
+        }
+
+        /* Heading entrance animations — Animista
+           https://animista.net/ — FreeBSD License
+           https://animista.net/license */
+        .slide-in-top {
+            animation: slide-in-top 1s
+            cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        .slide-in-left {
+            animation: slide-in-left 0.5s
+            cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        }
+
+        @keyframes slide-in-top {
+            0% {
+                transform: translateY(-1000px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes slide-in-left {
+            0% {
+                transform: translateX(-1000px);
+                opacity: 0;
+            }
+
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes bg-change {
+            0% {
+                background-color: red;
+            }
+
+            100% {
+                background-color: yellow;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="slide-in-top">Anthony Silveira</h1>
+        <h2 class="slide-in-left">Creative Web Developer</h2>
+    </header>
+</body>
+</html>
