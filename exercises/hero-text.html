@@ -4,36 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Hero Block with Image</title>
+    <title>Hero Block with Video</title>
     <meta name="description"
-          content="A hero block with a background image and a tinted overlay.">
+          content="A hero block with a background video that plays in a continuous loop and includes a tinted overlay.">
 
-    <link rel="preload" href="../assets/img/business.jpg" as="image">
+    <link rel="preload"
+          href="../assets/videos/hero-still.jpg"
+          as="image">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
         header {
-            @apply relative
+            @apply relative isolate
             min-h-[60vh] md:min-h-[80vh]
             bg-gray-600
-            bg-[url('../assets/img/business.jpg')]
-            bg-cover bg-center md:bg-top bg-no-repeat
             flex flex-col justify-center items-center
             px-8 lg:px-60 py-12
             text-center overflow-hidden;
         }
 
-        /* Camada preta com 40% de opacidade */
-        header::before {
-            content: "";
-            @apply absolute inset-0 bg-black/40;
+        /* Vídeo na camada de fundo */
+        header video {
+            @apply absolute inset-0 z-0
+            w-full h-full
+            object-cover object-center md:object-top;
         }
 
-        /* Mantém os textos acima da camada escura */
+        /* Overlay acima do vídeo */
+        header::before {
+            content: "";
+            @apply absolute inset-0 z-10
+            bg-linear-to-b
+            from-blue-950/70
+            to-pink-900/30
+            pointer-events-none;
+        }
+
+        /* Textos acima do vídeo e do overlay */
         header h1,
         header h2 {
-            @apply relative z-10 text-shadow-lg/30;
+            @apply relative z-20 text-shadow-lg/30;
         }
 
         header h1 {
@@ -85,8 +96,22 @@
 
 <body>
     <header>
-        <h1 class="slide-in-top">Anthony Silveira</h1>
-        <h2 class="slide-in-left">Creative Web Developer</h2>
+        <video
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="../assets/videos/hero-still.jpg"
+            aria-hidden="true">
+
+            <source
+                src="../assets/videos/hero-video.mp4"
+                type="video/mp4">
+        </video>
+
+        <h1 class="slide-in-top">Education for life</h1>
+
+        <h2 class="slide-in-left">A brighter career and future</h2>
     </header>
 </body>
 </html>
