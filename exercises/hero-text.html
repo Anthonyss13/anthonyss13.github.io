@@ -3,43 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hero Block with Text</title>
-    <meta name="description" content="A hero block with animated headings and background colours.">
+
+    <title>Hero Block with Image</title>
+    <meta name="description"
+          content="A hero block with a background image and a tinted overlay.">
+
+    <link rel="preload" href="../assets/img/business.jpg" as="image">
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
         header {
-            @apply min-h-[60vh] md:min-h-[80vh]
+            @apply relative
+            min-h-[60vh] md:min-h-[80vh]
+            bg-gray-600
+            bg-[url('../assets/img/business.jpg')]
+            bg-cover bg-center md:bg-top bg-no-repeat
             flex flex-col justify-center items-center
-            text-center px-8 py-12 overflow-hidden;
+            px-8 lg:px-60 py-12
+            text-center overflow-hidden;
+        }
 
-            background-color: red;
-            animation: bg-change 4s ease-in infinite alternate;
+        /* Camada preta com 40% de opacidade */
+        header::before {
+            content: "";
+            @apply absolute inset-0 bg-black/40;
+        }
+
+        /* Mantém os textos acima da camada escura */
+        header h1,
+        header h2 {
+            @apply relative z-10 text-shadow-lg/30;
         }
 
         header h1 {
             @apply text-7xl md:text-8xl
-            text-white font-bold
-             tracking-tight
-             mb-8;
+            text-white font-bold tracking-tight;
         }
 
         header h2 {
-            @apply text-4xl md:text-5xl text-white;
+            @apply mt-6 text-4xl md:text-5xl text-white;
         }
 
-        /* Heading entrance animations — Animista
-           https://animista.net/ — FreeBSD License
-           https://animista.net/license */
+        /* Animista — https://animista.net/
+           FreeBSD License: https://animista.net/license */
         .slide-in-top {
             animation: slide-in-top 1s
-            cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
 
         .slide-in-left {
             animation: slide-in-left 0.5s
-            cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
         }
 
         @keyframes slide-in-top {
@@ -63,16 +78,6 @@
             100% {
                 transform: translateX(0);
                 opacity: 1;
-            }
-        }
-
-        @keyframes bg-change {
-            0% {
-                background-color: red;
-            }
-
-            100% {
-                background-color: yellow;
             }
         }
     </style>
