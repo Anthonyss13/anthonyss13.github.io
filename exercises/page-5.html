@@ -5,28 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Places to Visit in Ireland</title>
+    <title>Ireland's Top Five Visitor Attractions</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
-        body {
-            @apply m-0 text-gray-900;
-        }
-
         header {
-            @apply flex flex-col justify-center items-center
-                w-full
-                bg-green-300
-                px-12 lg:px-60
-                py-9 lg:py-14;
+            @apply flex flex-col justify-around items-center
+                w-full mx-auto bg-green-300
+                px-12 lg:px-60 py-8 lg:py-14;
         }
 
         header h1 {
-            @apply text-5xl md:text-7xl
-                tracking-tight
-                text-center
-                mb-6 lg:mb-8;
+            @apply text-6xl md:text-7xl tracking-tight
+                text-center mb-8 lg:mb-12;
         }
 
         h1,
@@ -35,78 +27,59 @@
         }
 
         header p {
-            @apply text-green-900
-                text-xl md:text-2xl
-                text-center
-                font-normal
-                max-w-3xl
-                mb-6;
-        }
-
-        header a {
-            @apply underline font-bold;
-        }
-
-        header img {
-            @apply w-full max-w-xl mt-6;
+            @apply text-green-900 text-2xl md:text-3xl/12
+                text-center font-normal;
         }
 
         section {
             @apply bg-green-200
-                px-6 md:px-12 lg:px-20
-                py-10 lg:py-16;
+                px-12 lg:px-68
+                pt-4 pb-12 lg:pt-8 lg:pb-18;
         }
 
         section > * {
-            @apply w-full max-w-4xl mx-auto;
+            @apply w-full max-w-[48rem] mx-auto;
         }
 
         section h2 {
-            @apply text-3xl lg:text-4xl
-                tracking-tight
-                mt-10
-                mb-4;
+            @apply text-4xl lg:text-5xl tracking-tight
+                mt-10 lg:mt-14 lg:mb-2;
         }
 
         section img {
-            @apply w-full
-                shadow-md
-                my-5
-                rounded-[25px];
+            @apply mb-5 rounded-[25px];
         }
 
         section p {
             @apply text-lg md:text-xl/8 mb-5;
         }
 
-        section .highlight-text span {
-            @apply bg-green-700 text-white
-                inline-block px-6 py-2;
+        .visitors b {
+            @apply bg-green-700 text-white font-bold px-3 py-1;
+
         }
 
-        header *:last-child {
-            @apply mb-0!;
-        }
-
+        header *:last-child,
         section *:last-child {
-            @apply mb-0!;
+            margin-bottom: 0 !important;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Places to Visit in Ireland</h1>
+        <h1>Ireland's Top Five Visitor Attractions</h1>
 
         <p>
-            Discover some of the most popular attractions and destinations
-            around Ireland.
+            Explore Ireland through its dramatic landscapes, historic
+            treasures and family attractions. Discover places to enjoy
+            nature, learn something new and experience Irish culture.
         </p>
 
         <p>
             What are Ireland's most popular tourist attractions?
             According to a report by the
-            <a href="https://www.discoverireland.ie/" target="_blank">
+            <a href="https://www.discoverireland.ie/">
                 Irish Tourist Board
             </a>,
             the top five paid visitor attractions are those listed below.
@@ -114,6 +87,8 @@
 
         <img
             src="../assets/img/backpackers-visiting-ireland.png"
+            width="612"
+            height="408"
             alt="Backpackers visiting Ireland"
         >
     </header>
@@ -127,6 +102,21 @@
                 alt="Guinness Storehouse in Dublin"
             >
 
+            <p>
+                Discover the history of Guinness at the
+                <a
+                    href="https://www.guinness-storehouse.com/en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Guinness Storehouse</a>.
+                Explore exhibitions about brewing before enjoying
+                panoramic views of Dublin from the Gravity Bar.
+            </p>
+
+            <p class="visitors">
+                Annual Number of Visitors: <b>1,711,281</b>
+            </p>
+
             <h2>Cliffs of Moher, Co. Clare</h2>
 
             <img
@@ -134,16 +124,42 @@
                 alt="Cliffs of Moher in County Clare"
             >
 
-            <h2>Dublin Zoo</h2>
-
-            <p class="highlight-text">
-                <span>Annual Number of Visitors: <b>1,527,000</b></span>
+            <p>
+                Visit the
+                <a
+                    href="https://www.cliffsofmoher.ie"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Cliffs of Moher</a>
+                on Ireland's Atlantic coast. Enjoy spectacular ocean
+                scenery and watch seabirds along the cliffs.
             </p>
+
+            <p class="visitors">
+                Annual Number of Visitors: <b>1,527,000</b>
+            </p>
+
+            <h2>Dublin Zoo</h2>
 
             <img
                 src="../assets/img/dublin-zoo.jpg"
                 alt="Dublin Zoo"
             >
+
+            <p>
+                Explore
+                <a
+                    href="https://www.dublinzoo.ie"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Dublin Zoo</a>
+                in Phoenix Park. Discover animals from around the world
+                and learn about wildlife conservation during a family day out.
+            </p>
+
+            <p class="visitors">
+                Annual Number of Visitors: <b>1,264,300</b>
+            </p>
 
             <h2>National Aquatic Centre, Dublin</h2>
 
@@ -152,12 +168,46 @@
                 alt="National Aquatic Centre in Dublin"
             >
 
+            <p>
+                The
+                <a
+                    href="https://www.nationalaquaticcentre.ie"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >National Aquatic Centre</a>
+                in Blanchardstown offers swimming facilities and
+                water-based activities for visitors of different ages.
+            </p>
+
+            <p class="visitors">
+                Annual Number of Visitors: <b>1,099,756</b>
+            </p>
+
             <h2>Book of Kells Exhibition, Trinity College, Dublin</h2>
 
             <img
                 src="../assets/img/book-of-kells.jpg"
                 alt="Book of Kells Exhibition at Trinity College Dublin"
             >
+
+            <p>
+                Discover the
+                <a
+                    href="https://www.tcd.ie/visitors/book-of-kells/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >Book of Kells Exhibition</a>
+                at Trinity College Dublin. Learn about the famous
+                illustrated manuscript and the college's historic library.
+            </p>
+
+            <p class="visitors">
+                Annual Number of Visitors: <b>983,410</b>
+            </p>
+
+            <p>
+                <a href="../index.html" class="bg-green-700 text-white font-bold px-3 py-1">Back to home</a>
+            </p>
         </section>
     </main>
 </body>
