@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- Anthony Silveira 82897 -->
 
     <meta charset="UTF-8">
 
@@ -12,129 +12,36 @@
 
     <meta name="description" content="A sample web page with multiple sections.">
 
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+body { @apply m-0 font-sans text-slate-900 bg-white; }
+header { @apply px-[9%] pt-8 pb-10 md:px-[20%] md:py-12 text-center; }
+main > section { @apply px-[9%] py-8 md:px-[20%] md:py-12; }
+h1 { @apply text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-5; }
+header h2, header > p { @apply text-xl md:text-2xl font-normal leading-relaxed; }
+section h2 { @apply text-2xl md:text-3xl font-semibold tracking-tight mt-8 mb-4; }
+p { @apply text-lg leading-relaxed mb-5; }
+i { @apply italic; }
+a { @apply underline underline-offset-4 decoration-2 font-semibold transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4; }
+footer { @apply px-[9%] py-8 text-center; }
+footer p { @apply mb-0 text-sm; }
+section > :first-child { @apply mt-0; }
+section > :last-child { @apply mb-0; }
+@theme { --color-ink: #172554; }
+header { @apply bg-ink text-white; }
+.section-blue { @apply bg-blue-950 text-white; }
+.section-light { @apply bg-sky-100 text-slate-950; }
+.section-purple { @apply bg-purple-950 text-white; }
+.section-cream { @apply bg-amber-100 text-slate-950; }
+.section-green { @apply bg-emerald-950 text-white; }
+section a { @apply hover:text-amber-300; }
+</style>
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #222222;
-        }
-
-
-        /* Header */
-
-        header {
-            background-color: #1e3a8a;
-            color: white;
-            text-align: center;
-        }
-
-        header h1 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        header h2 {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-weight: normal;
-        }
-
-
-        /* Main content */
-
-        main {
-            background-color: white;
-        }
-
-        section {
-            margin-bottom: 35px;
-        }
-
-        section h2 {
-            margin-top: 0;
-            margin-bottom: 15px;
-            color: #1e3a8a;
-        }
-
-        section p {
-            margin-top: 0;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-
-
-        /* Back link */
-
-        .back-home {
-            display: inline-block;
-            background-color: #1e3a8a;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-        }
-
-        .back-home:hover {
-            background-color: #1d4ed8;
-        }
-
-
-        /* Small screens */
-
-        @media (max-width: 767px) {
-
-            header {
-                padding: 35px 5%;
-            }
-
-            main {
-                padding: 30px 5%;
-            }
-
-            header h1 {
-                font-size: 32px;
-            }
-
-            header h2 {
-                font-size: 20px;
-            }
-
-            section h2 {
-                font-size: 24px;
-            }
-
-        }
-
-
-        /* Large screens */
-
-        @media (min-width: 768px) {
-
-            header {
-                padding: 45px 20%;
-            }
-
-            main {
-                padding: 40px 20%;
-            }
-
-            header h1 {
-                font-size: 42px;
-            }
-
-            header h2 {
-                font-size: 24px;
-            }
-
-            section h2 {
-                font-size: 26px;
-            }
-
-        }
-
-    </style>
-
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+<link rel="icon" href="../assets/img/favicons/favicon.ico">
+<link rel="manifest" href="../assets/img/favicons/site.webmanifest">
 </head>
 
 
@@ -142,7 +49,7 @@
 
     <header>
 
-        <h1>Big heading</h1>
+        <h1 class="uppercase">Big heading</h1>
 
         <h2>Smaller sub-heading</h2>
 
@@ -151,7 +58,7 @@
 
     <main>
 
-        <section>
+        <section class="section-blue">
 
             <h2>Smaller Heading</h2>
 
@@ -172,7 +79,7 @@
         </section>
 
 
-        <section>
+        <section class="section-light">
 
             <h2>Smaller Heading</h2>
 
@@ -193,7 +100,7 @@
         </section>
 
 
-        <section>
+        <section class="section-purple">
 
             <h2>Smaller Heading</h2>
 
@@ -214,7 +121,7 @@
         </section>
 
 
-        <section>
+        <section class="section-cream">
 
             <h2>Smaller Heading</h2>
 
@@ -235,7 +142,7 @@
         </section>
 
 
-        <section>
+        <section class="section-green">
 
             <h2>Smaller Heading</h2>
 
@@ -256,7 +163,7 @@
         </section>
 
 
-        <section>
+        <section class="section-blue">
 
             <h2>Smaller Heading</h2>
 

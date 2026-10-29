@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Anthony Silveira 82897 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Van Gogh — The Arles Years</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <style type="text/tailwindcss">
         body {
@@ -53,18 +57,29 @@
         section > :last-child {
             @apply mb-0;
         }
-    </style>
+    body { font-family: 'Merriweather', Georgia, serif; }
+
+a { @apply text-blue-900 underline decoration-2 underline-offset-4 transition-colors hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-4; }
+img { @apply max-w-full h-auto; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+<link rel="icon" href="../assets/img/favicons/favicon.ico">
+<link rel="manifest" href="../assets/img/favicons/site.webmanifest">
 </head>
 
-<body>
+<body id="top-of-page">
     <header>
         <h1>Vincent van Gogh</h1>
         <h2>His life and art</h2>
-    </header>
+    <nav aria-label="Page sections" class="mt-6"><a class="text-white hover:text-yellow-100" href="#arles-years">The Arles Years</a></nav>
+</header>
 
     <main>
         <section>
-            <h3>The Arles Years</h3>
+            <h3 id="arles-years">The Arles Years</h3>
 
             <p>
                 Van Gogh's two years at Arles in France (1888–89)
@@ -179,7 +194,8 @@
                     back to home
                 </a>
             </p>
-        </section>
+        <p><a href="#top-of-page">Return to top of page</a></p>
+</section>
     </main>
 </body>
 </html>

@@ -2,133 +2,35 @@
 <html lang="en">
 
 <head>
+    <!-- Anthony Silveira 82897 -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>A Tale of Two Cities</title>
 
-    <style>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+body { @apply m-0 font-sans text-slate-900 bg-white; }
+header { @apply px-[9%] pt-8 pb-10 md:px-[20%] md:py-12 text-center; }
+main > section { @apply px-[9%] py-8 md:px-[20%] md:py-12; }
+h1 { @apply text-4xl md:text-6xl font-bold tracking-tight leading-tight mb-5; }
+header h2, header > p { @apply text-xl md:text-2xl font-normal leading-relaxed; }
+section h2 { @apply text-2xl md:text-3xl font-semibold tracking-tight mt-8 mb-4; }
+p { @apply text-lg leading-relaxed mb-5; }
+i { @apply italic; }
+a { @apply underline underline-offset-4 decoration-2 font-semibold transition-colors hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-4; }
+footer { @apply px-[9%] py-8 text-center; }
+footer p { @apply mb-0 text-sm; }
+section > :first-child { @apply mt-0; }
+section > :last-child { @apply mb-0; }
+header { @apply bg-red-900 text-white; } footer a { @apply inline-block bg-red-900 text-white px-6 py-3 hover:bg-red-800; }
+</style>
 
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f4f4;
-            color: #222222;
-        }
-
-
-        /* Header */
-
-        header {
-            background-color: #7f1d1d;
-            color: white;
-            text-align: center;
-        }
-
-        header h1 {
-            margin-top: 0;
-            margin-bottom: 10px;
-        }
-
-        header h2 {
-            margin-top: 0;
-            margin-bottom: 0;
-            font-weight: normal;
-        }
-
-
-        /* Main content */
-
-        main {
-            background-color: #ffffff;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        section p {
-            margin-top: 0;
-            margin-bottom: 0;
-            line-height: 1.7;
-        }
-
-
-        /* Footer */
-
-        footer {
-            text-align: center;
-            background-color: #ffffff;
-        }
-
-        footer a {
-            display: inline-block;
-            background-color: #7f1d1d;
-            color: white;
-            text-decoration: none;
-            padding: 12px 24px;
-        }
-
-        footer a:hover {
-            background-color: #991b1b;
-        }
-
-
-        /* Small screens */
-
-        @media (max-width: 767px) {
-
-            header {
-                padding: 30px 5%;
-            }
-
-            main {
-                padding: 30px 5%;
-            }
-
-            footer {
-                padding: 0 5% 30px 5%;
-            }
-
-            header h1 {
-                font-size: 32px;
-            }
-
-            header h2 {
-                font-size: 20px;
-            }
-
-        }
-
-
-        /* Large screens */
-
-        @media (min-width: 768px) {
-
-            header {
-                padding: 40px 20%;
-            }
-
-            main {
-                padding: 40px 20%;
-            }
-
-            footer {
-                padding: 0 20% 40px 20%;
-            }
-
-            header h1 {
-                font-size: 40px;
-            }
-
-            header h2 {
-                font-size: 22px;
-            }
-
-        }
-
-    </style>
-
+<link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicons/favicon-16x16.png">
+<link rel="icon" href="../assets/img/favicons/favicon.ico">
+<link rel="manifest" href="../assets/img/favicons/site.webmanifest">
 </head>
 
 
