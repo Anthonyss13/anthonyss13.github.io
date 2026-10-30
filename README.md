@@ -18,7 +18,7 @@ Open index.html in a browser with Internet access. TailwindCSS loads from the CD
 ## Before submitting
 
 1. Check all pages visually on mobile and desktop with Internet access.
-2. The installed AS favicon was generated locally. To follow the assessment's online-service requirement exactly, upload assets/img/favicons/android-chrome-512x512.png to https://favicon.io/favicon-converter/ and replace the files in assets/img/favicons/ with the downloaded set.
+2. Completed: the AS favicon was generated using favicon.io, installed in assets/img/favicons/, and verified in the browser tab.
 3. Upload the complete website, including assets, to the GitHub Pages repository.
 4. Fill in and upload the assignment cover sheet to Moodle.
 
