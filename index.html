@@ -23,7 +23,21 @@ footer { @apply px-[9%] py-8 text-center; }
 footer p { @apply mb-0 text-sm; }
 section > :first-child { @apply mt-0; }
 section > :last-child { @apply mb-0; }
-header { @apply min-h-[60vh] flex flex-col items-center justify-center bg-slate-900 text-white; } header h2 { @apply text-sky-200; } main { @apply bg-stone-100; } section a { @apply text-slate-700 hover:text-blue-800; } .header-line { @apply w-16 h-1 bg-sky-200 mb-6 mx-auto; } .developer-image { @apply w-full max-w-3xl mx-auto rounded-xl shadow-lg mb-10; } footer { @apply bg-stone-100 text-slate-600; }
+header { @apply min-h-[60vh] flex flex-col items-center justify-center bg-emerald-950 text-white; }
+header h2 { @apply text-emerald-200 mb-5; }
+main { @apply bg-emerald-50; }
+section h2 { @apply text-emerald-950; }
+.header-line { @apply w-16 h-1 bg-amber-300 mb-6 mx-auto; }
+.developer-image { @apply w-full max-w-3xl h-auto mx-auto rounded-xl shadow-lg mb-10; }
+.exercise-links { @apply max-w-3xl mx-auto text-left; }
+.exercise-links p { @apply mb-6; }
+.exercise-links a {
+    @apply inline text-lg font-medium text-emerald-950
+    underline underline-offset-4 decoration-2
+    hover:text-emerald-700
+    focus-visible:outline-emerald-950;
+}
+footer { @apply bg-emerald-950 text-emerald-100; }
 </style>
 <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
@@ -50,8 +64,9 @@ header { @apply min-h-[60vh] flex flex-col items-center justify-center bg-slate-
     <main>
         <section>
             <h2 class="uppercase tracking-widest">My Web Design Exercises</h2>
-<img class="developer-image" src="assets/img/frontend-development.svg" alt="Illustration of a laptop displaying HTML and CSS code" width="960" height="540">
+            <img class="developer-image" src="assets/img/web-design-workspace.svg" alt="Illustration of a web design workspace with a code editor and a website preview" width="960" height="540">
 
+            <nav class="exercise-links" aria-label="Web design exercises">
             <p>
                 <a href="exercises/page-1.html">
                     A Tale of Two Cities
@@ -92,6 +107,7 @@ header { @apply min-h-[60vh] flex flex-col items-center justify-center bg-slate-
 
         <p><a href="exercises/hero-image.html">Hero Block with Image</a></p>
 <p><a href="exercises/hero-video.html">Hero Block with Video</a></p>
+            </nav>
 </section>
     </main>
 
