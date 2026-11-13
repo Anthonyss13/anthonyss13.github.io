@@ -1,0 +1,50 @@
+/* Smooth Smoothies — Anthony Silveira. Tutorial: munnelly.com/dorset/ */
+body { font-family: "Neucha", cursive; }
+
+.section-selector-1 p { color: var(--purple-800); }
+.section-selector-2 { background-color: var(--pink-200); }
+.section-selector-2 h2 { color: var(--red-700); }
+.section-selector-3 { background-color: var(--green-200); }
+.section-selector-3 h2 { color: var(--green-700); }
+.section-selector-4 { background-color: var(--purple-800); }
+.section-selector-4 h2 { color: var(--white-000); }
+.section-selector-4 .col-2.col-text p { color: var(--white-000); }
+.section-selector-5 { background-color: var(--yellow-200); }
+.section-selector-5 h2 { color: var(--yellow-600); }
+
+/* Font sizes and letter spacing specified in the final steps of the lesson. */
+header h1 { font-size: var(--font-size-xxxl); }
+header h2 { font-size: var(--font-size-xxl); }
+header h1, header h2 { letter-spacing: -1px; }
+.section-selector-1 p.bigger-desktop { font-size: var(--font-size-xl); }
+.section-selector-1 p.bigger-mobile { font-size: var(--font-size-lg); }
+.cols-2-half .col-2 h2 { font-size: var(--font-size-xxl); }
+.cols-2-half .col-2 p { font-size: var(--font-size-md); }
+.cols-2-half .col-2 h2, .cols-2-half .col-2 p { letter-spacing: 1px; }
+
+header.hero-bg { position: relative; min-height: 80vh; }
+header .container-text { position: relative; z-index: 3; }
+header h1, header h2 { color: var(--white-000); text-shadow: 2px 2px 2px #222; }
+header .container-overlay { --overlay-opacity: 0.3; }
+
+/* Keep the illustration and text inset as shown in the tutorial. */
+main > .cols-2-half .col-2 { margin: 0; padding: 5% 4%; }
+main > .cols-2-half .col-2:first-child { padding-left: 12%; }
+main > .cols-2-half .col-2:last-child { padding-right: 12%; }
+.cols-2-half figure { margin: 0; }
+.cols-2-half figure img { width: 100%; height: auto; }
+
+@media (min-width: 768px) {
+    .section-selector-1 p.bigger-desktop { font-size: var(--font-size-xl); }
+}
+@media (max-width: 767px) {
+    header.hero-bg { min-height: 60vh; }
+    main > .cols-2-half { flex-direction: column; }
+    main > .cols-2-half .col-2 { flex-basis: auto; max-width: 100%; width: 100%; padding: 8% 9%; }
+    main > .cols-2-half .col-text { order: 0; padding-bottom: 0; }
+    main > .cols-2-half .col-visual { order: 1; }
+    .cols-2-half figure { width: min(100%, 420px); margin-inline: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .reveal-fade-in-header { animation: none; }
+}

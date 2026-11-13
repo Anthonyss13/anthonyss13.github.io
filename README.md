@@ -17,3 +17,8 @@ Student ID: 82897
 website link: https://anthonyss13.github.io/
 
 Reference: https://www.munnelly.com/dorset/
+
+## Portfolio projects
+
+- `portfolio/smoothies/index.html`: Smooth Smoothies, following the teacher's project with Neucha, a background-image hero, a deckhead and four alternating product sections.
+- Project instructions: https://www.munnelly.com/dorset/projects-ui/project-smoothies/
