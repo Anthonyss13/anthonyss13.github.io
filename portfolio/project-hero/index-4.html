@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Silveira | Portfolio | Sample Hero Block Layout 4</title>
+    <meta name="description" content="Gallery of hero block layouts.">
+
+    <!-- Preload the hero image so it appears as soon as possible -->
+    <link rel="preload" as="image" href="assets/img/hair.png">
+
+    <link rel="stylesheet" href="assets/hero.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+
+        header h1 { font-family: 'Playfair Display', serif; letter-spacing: -4px; font-weight: 400; } header h2 { font-family: 'Playfair Display', serif; }
+
+
+    </style>
+
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3R93SPWFP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G3R93SPWFP');
+    </script>
+</head>
+
+
+<body>
+
+            <header class="split hero-4">
+        <figure class="visual"><img src="assets/img/hair.png" alt="A model with long styled brown hair" fetchpriority="high"></figure>
+        <div class="copy">
+            <p class="badge"><strong>10%</strong> off all week</p>
+            <h1>Claire’s Hair</h1>
+            <h2>Our team of stylists offer the latest fashions and techniques.</h2>
+            <div class="buttons"><a class="button secondary" href="#gallery">Our salon <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8"/></svg></a><a class="button primary" href="#gallery">Book now <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 4 8 8-8 8"/></svg></a></div>
+        </div>
+    </header>
+
+		<!-- =============== Do not remove anything below this line ================= -->
+
+	<main id="gallery" aria-label="Hero block gallery">
+			<section class="w-full px-6 py-16 md:px-12 md:py-24 text-center">
+				<p class="text-xl"><a href="index-1.html" class="text-blue-800 underline underline-offset-6">Hero Block 1</a> | 
+				<a href="index-2.html" class="text-blue-800 underline underline-offset-6">Hero Block 2</a> | 
+				<a href="index-3.html" class="text-blue-800 underline underline-offset-6">Hero Block 3</a> | 
+				Hero Block 4 | 
+				<a href="index-5.html" class="text-blue-800 underline underline-offset-6">Hero Block 5</a></p>
+		</section>
+
+	</main>
+
+</body>
+</html>

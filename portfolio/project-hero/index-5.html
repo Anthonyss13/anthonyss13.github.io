@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Silveira | Portfolio | Sample Hero Block Layout 5</title>
+    <meta name="description" content="Gallery of hero block layouts.">
+
+    <!-- Preload the hero image so it appears as soon as possible -->
+    <link rel="preload" as="image" href="assets/img/ui-designer.jpg">
+
+   <link rel="stylesheet" href="assets/hero.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+
+        header h1 { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; letter-spacing: 4px; } header h2 { font-family: 'Zilla Slab', serif; font-weight: 400; }
+
+
+    </style>
+
+
+	<!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600&amp;family=Zilla+Slab&amp;display=swap" rel="stylesheet">
+
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G3R93SPWFP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-G3R93SPWFP');
+    </script>
+</head>
+
+
+
+<body>
+
+            <header class="split hero-5">
+        <div class="copy">
+            <p class="eyebrow">JENNIFER CHANG</p>
+            <h1>UI DESIGNER</h1>
+            <h2>Creating human-friendly interfaces for mobile and web apps.</h2>
+            <div class="buttons"><a class="button secondary" href="#gallery"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20V5h6l2 3h10l-3 12H3zm0 0 4-10h14"/></svg>Recent work</a><a class="button primary" href="#gallery"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg>Hire me</a></div>
+        </div>
+        <figure class="visual"><img src="assets/img/ui-designer.jpg" alt="A designer sketching ideas in a notebook" fetchpriority="high"></figure>
+    </header>
+
+		
+        <!-- =============== Do not remove anything below this line ================= -->
+
+	<main id="gallery" aria-label="Hero block gallery">
+			<section class="w-full px-6 py-16 md:px-12 md:py-24 text-center">
+				<p class="text-xl"><a href="index-1.html" class="text-blue-800 underline underline-offset-6">Hero Block 1</a> | 
+				<a href="index-2.html" class="text-blue-800 underline underline-offset-6">Hero Block 2</a> | 
+				<a href="index-3.html" class="text-blue-800 underline underline-offset-6">Hero Block 3</a> | 
+				<a href="index-4.html" class="text-blue-800 underline underline-offset-6">Hero Block 4</a> | 
+				Hero Block 5</p>
+		</section>
+
+	</main>
+
+</body>
+</html>

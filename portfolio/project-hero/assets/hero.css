@@ -1,0 +1,63 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; }
+header { min-height: 80vh; }
+.split { display: grid; grid-template-columns: 1fr 1fr; }
+.copy { padding: clamp(32px, 5vw, 96px); display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+header h1 { margin: 0 0 28px; font-size: clamp(2.75rem, 5vw, 6rem); line-height: 1.12; }
+header h2 { margin: 0; font-size: clamp(1.25rem, 2vw, 2rem); font-weight: 400; line-height: 1.45; }
+.visual { margin: 0; min-width: 0; }
+.visual img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.buttons { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 48px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 48px; padding: 12px 26px; border: 1px solid currentColor; border-radius: 10px; font: 700 1.125rem Arial, sans-serif; text-decoration: none; }
+.button:hover { filter: brightness(.88); }
+a:focus-visible { outline: 3px solid #2563eb; outline-offset: 5px; }
+.button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2; }
+.hero-1 { position: relative; isolation: isolate; display: block; width: 100%; aspect-ratio: 2.54 / 1; min-height: 0; margin: 0; color: white; padding: 0; background: #08142e; overflow: hidden; }
+.hero-1 .background { position: absolute; inset: 0; z-index: -2; display: block; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(1.45); }
+.hero-1::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, #07144826, transparent 75%); }
+.hero-1 .copy { position: absolute; top: 20.5%; left: 4%; padding: 0; width: 92%; min-width: 0; }
+.hero-1 h1 { font-size: clamp(2rem, 5vw, 6rem); line-height: 1.15; margin-bottom: 2vw; }
+.hero-1 h2 { font-size: clamp(1rem, 2.2vw, 2.625rem); line-height: 1.4; }
+.hero-1 .buttons { margin-top: 9vw; gap: 3.2vw; }
+.hero-1 .button { padding: .8em 1.5em; min-height: 37px; gap: .75em; font-family: 'Roboto', Arial, sans-serif; font-size: clamp(.875rem, 1.3vw, 1.5625rem); font-weight: 500; border-radius: .6em; }
+.hero-1 .button svg { width: 1.1em; height: 1.1em; flex-shrink: 0; }
+.hero-1 .primary { background: white; color: black; border-color: white; }
+.hero-1 .secondary { color: white; border-width: 1px; }
+.hero-2 { background: #f7f9fb; color: #0f172a; padding: 4% 0; gap: 4%; grid-template-columns: 48% 48%; }
+.hero-2 .copy { padding: 3% 1%; }
+.hero-2 h1 span { color: #00c853; }
+.hero-2 h2 { color: #334155; }
+.hero-2 .visual { display: flex; align-items: center; }
+.hero-2 .visual img { height: auto; object-fit: contain; }
+.hero-2 .primary { background: #00c853; color: white; border-color: #00c853; border-radius: 50px; }
+.hero-3 { background: #fff7db; color: black; }
+.hero-3 h2 { color: #4b5563; }
+.hero-3 .primary { background: black; color: white; }
+.hero-3 .secondary { color: black; }
+.hero-4 { background: #fac6cf; color: #063047; }
+.hero-4 .visual img { object-fit: contain; object-position: bottom center; }
+.hero-4 .copy { padding-left: 2%; }
+.badge { display: inline-block; background: #9567cd; color: white; padding: 8px 18px; border-radius: 30px; margin-bottom: 28px; font-size: 1rem; }
+.hero-4 .primary { background: #c23d60; color: white; border-color: #c23d60; }
+.hero-4 .secondary { color: #c23d60; }
+.hero-5 { background: black; color: white; }
+.hero-5 h1 { color: #59efb2; }
+.eyebrow { font-weight: 700; letter-spacing: 5px; text-decoration: underline wavy #59efb2; text-underline-offset: 8px; margin: 0 0 32px; }
+.hero-5 .primary { background: #59efb2; color: black; border-color: #59efb2; }
+.hero-5 .secondary { color: white; }
+@media (max-width: 767px) {
+    header { min-height: 60vh; }
+    .split { grid-template-columns: 1fr; gap: 0; }
+    .split .copy { padding: 40px 9%; order: 0; }
+    .split .visual { order: 1; height: 360px; }
+    .hero-2 .visual { padding: 24px 9%; height: auto; }
+    .hero-4 .visual { height: 420px; }
+    .hero-1 { min-height: 390px; aspect-ratio: auto; margin-top: 0; }
+    .hero-1 .copy { top: 15%; left: 6%; width: 88%; padding: 0; }
+    .hero-1 .background { object-position: center; }
+    .hero-1::after { background: #0006; }
+    .buttons { gap: 16px; margin-top: 32px; }
+    .hero-1 h1 { margin-bottom: 20px; }
+    .hero-1 .buttons { margin-top: 40px; gap: 16px; }
+    .button { font-size: 1rem; padding: 12px 20px; }
+}
